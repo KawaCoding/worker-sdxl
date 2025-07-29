@@ -43,7 +43,7 @@ class ModelHandler:
         )
         # Load Base Pipeline from cache using identifier
         base_pipe = StableDiffusionXLPipeline.from_pretrained(
-            "stabilityai/stable-diffusion-xl-base-1.0",
+            "workspace/models/omigenXL",
             vae=vae,
             torch_dtype=torch.float16,
             variant="fp16",
