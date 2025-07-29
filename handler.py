@@ -1,4 +1,4 @@
-import os
+okay it works now, so lets go with using my own model. This is the handler function import os
 import base64
 
 import torch
@@ -8,7 +8,7 @@ from diffusers import (
     AutoencoderKL,
 )
 from diffusers.utils import load_image
-#Nothing
+
 from diffusers import (
     PNDMScheduler,
     LMSDiscreteScheduler,
@@ -43,7 +43,7 @@ class ModelHandler:
         )
         # Load Base Pipeline from cache using identifier
         base_pipe = StableDiffusionXLPipeline.from_pretrained(
-            "workspace/models/omigenXL",
+            "stabilityai/stable-diffusion-xl-base-1.0",
             vae=vae,
             torch_dtype=torch.float16,
             variant="fp16",
